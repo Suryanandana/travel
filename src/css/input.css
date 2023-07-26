@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.splide__slide.is-active h1 {
+    opacity: 1;
+    transition: all 3s ease-in-out;
+}
