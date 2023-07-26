@@ -6,3 +6,26 @@
     opacity: 1;
     transition: all 3s ease-in-out;
 }
+
+/* .button-1 {
+    overflow: hidden;
+}
+
+.button-1::before {
+    content: "";
+    width: 0;
+    height: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+}
+
+.button-1::before {
+    @apply bg-blue-500;
+}
+
+.button-1:hover::before {
+    transition: all 0.5s ease-in-out;
+    width: 100px;
+} */
