@@ -36,8 +36,8 @@
     transition: all 3s ease-in-out;
 }
 
-.arrow--next {
-    display: none;
+.splide__arrow--next {
+    transform: translateX(10%);
 }
 
 .splide__pagination__page {
