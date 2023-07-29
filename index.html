@@ -889,24 +889,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="src/js/script.js"></script>
-    <script>
-        var navbar = document.querySelector("#navbar");
-        // console.log(document.documentElement.scrollTop)
-        // get navbar height
-        var navbarHeight = navbar.offsetHeight;
-        // jika scroll ke bawah setinggi navbar maka navbar akan berubah warna
-        window.onscroll = function () {
-            if (window.pageYOffset > navbarHeight + 150) {
-                navbar.classList.add("fixed");
-                navbar.classList.add("-top-10");
-                navbar.classList.add("translate-y-10");
-            } else {
-                navbar.classList.remove("fixed");
-                navbar.classList.remove("-top-10");
-                navbar.classList.remove("translate-y-10");
-            }
-        };
-    </script>
 </body>
 
 </html>

@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- tailwind output -->
+    <link rel="stylesheet" href="dist/output.css">
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- splide -->
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Volkhov:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- light theme -->
+    <script>
+        localStorage.theme = 'light'
+    </script>
+    <!-- judul -->
+    <title>Munduk Authentic</title>
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="src/images/logo/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="src/images/logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="src/images/logo/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body class="font-poppins">
+    <!-- header -->
+    <div class="hidden md:justify-around md:items-center md:flex py-3">
+        <div class="flex items-center">
+            <img src="src/images/logo/logo.png" alt="Munduk Authentic Logo" class="w-16">
+            <div class="flex flex-col ml-3">
+                <span class="text-3xl font-bold text-cyan-500">Munduk Authentic</span>
+                <span>mundukauthentic.com</span>
+            </div>
+        </div>
+        <div class="flex items-center py-3 justify-around gap-x-5">
+            <div class="px-5 border-r-2 flex items-center gap-x-1">
+                <i class="fa-regular fa-clock text-xl"></i>
+                <span> 09:00AM - 09:00PM (UTC+08:00)</span>
+            </div>
+            <div class="flex items-center gap-x-1">
+                <i class="fa-solid fa-phone text-xl"></i>
+                <span> +62 877-6283-4455</span>
+            </div>
+            <a href="https://wa.me/+6287762834455" type="button"
+                class="text-cyan-700 hover:text-white border border-cyan-400 hover:bg-cyan-500 focus:ring-4 focus:outline-none focus:ring-cyan-300 font-medium rounded-lg text-sm px-8 py-3 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">Reservation
+                Now</a>
+        </div>
+    </div>
+
+    <!-- navbar -->
+    <nav class="md:bg-cyan-600 bg-white transition-all duration-500 border-gray-200 dark:bg-gray-900 py-4 md:py-0 w-full z-50"
+        id="navbar">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between md:px-10 mx-auto px-4">
+            <button data-collapse-toggle="navbar-default" type="button"
+                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                aria-controls="navbar-default" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+            </button>
+            <a href="https://flowbite.com/" class="flex items-center md:hidden ml-3">
+                <img src="src/images/logo/logo-non-transparan-removebg-preview.png" class="w-10" alt="Flowbite Logo" />
+                <span
+                    class="self-center hidden sm:block ml-2 text-2xl font-semibold whitespace-nowrap dark:text-white text-cyan-500">Munduk
+                    Authentic</span>
+            </a>
+            <!-- dropdown -->
+            <button id="dropdownDividerButton" data-dropdown-toggle="dropdownDivider"
+                class="text-white md:hidden inline-flex focus:outline-none font-medium rounded-lg text-sm px-4 py-2 text-center items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                type="button">
+                <i class="fa-solid fa-ellipsis-vertical text-black text-3xl"></i>
+            </button>
+            <!-- Dropdown menu -->
+            <div id="dropdownDivider"
+                class="z-10 hidden px-5 py-3 bg-white divide-y divide-gray-100 rounded-lg shadow w-auto dark:bg-gray-700 dark:divide-gray-600">
+                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200 flex flex-col gap-y-5"
+                    aria-labelledby="dropdownDividerButton">
+                    <li class="flex items-center">
+                        <i class="fa-regular fa-clock text-xl"></i>
+                        <span class="ml-2">09:00AM - 09:00PM (UTC+08:00)</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fa-solid fa-phone text-xl"></i>
+                        <span class="ml-1"> +62 823-616-7763</span>
+                    </li>
+                    <li>
+                        <button type="button"
+                            class="text-cyan-700 hover:text-white border border-cyan-400 hover:bg-cyan-500 focus:ring-4 focus:outline-none focus:ring-cyan-300 font-medium rounded-lg text-sm px-8 py-3 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">Reservation
+                            Now</button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="hidden w-full md:block lg:w-auto md:w-1/2" id="navbar-default">
+                <ul
+                    class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                    <li class="md:hidden">
+                        <div class="flex justify-around py-3 px-20 border-b-2 mb-3">
+                            <a href=""><i class="fa-brands fa-instagram text-2xl"></i></a>
+                            <a href=""><i class="fa-brands fa-whatsapp text-2xl"></i></a>
+                            <a href=""><i class="fa-brands fa-square-facebook text-2xl"></i></a>
+                            <a href=""><i class="fa-regular fa-envelope text-2xl"></i></a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="navbar-list navbar-active" aria-current="page">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" class="navbar-list">About</a>
+                    </li>
+                    <li>
+                        <a href="#" class="navbar-list">Services</a>
+                    </li>
+                    <li>
+                        <a href="#" class="navbar-list">Tour <span class="md:hidden lg:inline">Package</span></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <ul
+                    class="font-medium flex flex-col text-white p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                    <li>
+                        <a href=""><i class="fa-brands fa-instagram text-xl hover:text-pink-300"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://wa.me/+6287762834455"><i
+                                class="fa-brands fa-whatsapp text-xl hover:text-green-300"></i></a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa-brands fa-square-facebook text-xl hover:text-blue-300"></i></a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa-regular fa-envelope text-xl hover:text-red-300"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- article -->
+    <div class="container mx-auto flex flex-wrap py-6">
+        <!-- Post Section -->
+        <section class="w-full md:w-2/3 flex flex-col items-center px-3">
+            <article class="flex flex-col shadow my-4">
+                <!-- Article Image -->
+                <a href="#" class="hover:opacity-75">
+                    <img src="src/images/waterfalls trek/LAANGAN.jpg"
+                        class="w-[500px] h-[250px] lg:w-[1000px] lg:h-[500px] object-cover">
+                </a>
+                <div class="bg-white flex flex-col justify-start p-6">
+                    <a href="#" class="text-cyan-700 text-sm font-bold uppercase pb-4">Tour Package</a>
+                    <a href="#" class="text-3xl font-bold hover:text-gray-700 pb-4">Waterfalls Trek</a>
+                    <h1 class="text-2xl font-bold pb-3 text-gray-800">Introduction</h1>
+                    <p class="pb-3 text-gray-700 text-justify">As Munduk is the house of some of the best waterfalls in Bali, trekking to some
+                        waterfalls should be one of your list while visiting Munduk village. On this trek, we going to
+                        see three stunning waterfalls which are named RED CORAL, LABUHAN KEBO and LAANGAN waterfall.</p>
+                    <p class="pb-3 text-gray-700 text-justify">Please note that the whole area along the paths to waterfalls are not wild forest
+                        but private farmers land as their plantation. For that reason the Journey to waterfalls is
+                        another valuable thing beside the waterfall itself. Our experience guide will be very
+                        enthusiastic to discuss the farming system and show you many different types of plants that are
+                        growing along the trek. The local guide will assist you to recognise some fruits, spices and
+                        herb medicine along the trek. </p>
+                    <h1 class="text-2xl font-bold pb-3 text-gray-800">Gallery</h1>
+                    <div class="grid grid-cols-3 gap-3">
+                        <img class="hover:opacity-75 aspect-video object-cover"
+                            src="src/images/waterfalls trek/LAANGAN.jpg" data-popover-target="popover1">
+                        <img class="hover:opacity-75 aspect-video object-cover"
+                            src="src/images/waterfalls trek/LABUHAN KEBO.jpg" data-popover-target="popover2">
+                        <img class="hover:opacity-75 aspect-video object-cover"
+                            src="src/images/waterfalls trek/RED CORAL.jpg" data-popover-target="popover3">
+                        <!-- popover -->
+                        <div data-popover id="popover1" role="tooltip"
+                            class="absolute z-10 invisible inline-block w-auto text-sm text-gray-900 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
+                            <div class="px-3 py-2">
+                                <p>Laangan</p>
+                            </div>
+                        </div>
+                        <div data-popover id="popover2" role="tooltip"
+                            class="absolute z-10 invisible inline-block w-auto text-sm text-gray-900 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
+                            <div class="px-3 py-2">
+                                <p>Labuhan Kebo</p>
+                            </div>
+                        </div>
+                        <div data-popover id="popover3" role="tooltip"
+                            class="absolute z-10 invisible inline-block w-auto text-sm text-gray-900 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
+                            <div class="px-3 py-2">
+                                <p>Red Coral</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <!-- Next & Prev Section -->
+            <div class="w-full flex pt-6">
+                <a href="#" class="w-1/2 bg-white shadow hover:shadow-md text-left p-6">
+                    <p class="text-lg text-cyan-800 font-bold flex items-center"><i class="fas fa-arrow-left pr-1"></i>
+                        Previous</p>
+                    <p class="pt-2">Instagramable Tour</p>
+                </a>
+                <a href="#" class="w-1/2 bg-white shadow hover:shadow-md text-right p-6">
+                    <p class="text-lg text-cyan-800 font-bold flex items-center justify-end">Next <i
+                            class="fas fa-arrow-right pl-1"></i></p>
+                    <p class="pt-2">Holy Lake and Jungle Trek</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Sidebar Section -->
+        <aside class="w-full md:w-1/3 flex flex-col items-center px-3">
+            <div class="w-full bg-white shadow flex flex-col my-4 p-6">
+                <div class="block py-2 xl:col-span-3 lg:col-span-4">
+                    <div class="mb-3 pb-3 space-x-5 border-b-2 border-cyan-700 border-opacity-10 dark:border-violet-400">
+                        Recent Posts
+                    </div>
+                    <div class="flex flex-col divide-y divide-cyan-600">
+                        <div class="flex px-1 py-4">
+                            <img alt="" class="flex-shrink-0 object-cover w-20 h-20 mr-4 dark:bg-gray-500"
+                                src="src/images/farmer culinary/padi pantig3.jpg">
+                            <div class="flex flex-col flex-grow justify-between">
+                                <a rel="noopener noreferrer" href="#" class="font-serif hover:underline">Farmer
+                                    Culinary Trek</a>
+                                <p class="text-xs flex">
+                                    <span>read more</span>
+                                    <svg class="w-4 h-4 ml-1" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
+                                        fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M5 12h14"></path>
+                                        <path d="M12 5l7 7-7 7"></path>
+                                    </svg>
+                                </p>
+                                <p class="text-xs dark:text-gray-400"><i class="fa-solid fa-person"></i>
+                                    <span class="ml-1">2-4 People</span>
+                                    <a rel="noopener noreferrer" href="#"
+                                        class="block dark:text-blue-400 lg:ml-2 lg:inline hover:underline"><i
+                                            class="fa-solid fa-dollar-sign"></i><span class="ml-1">28</span></a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex px-1 py-4">
+                            <img alt="" class="flex-shrink-0 object-cover w-20 h-20 mr-4 dark:bg-gray-500"
+                                src="src/images/farmer custom trek/IMG-20230613-WA0004.jpg">
+                            <div class="flex flex-col flex-grow justify-between">
+                                <a rel="noopener noreferrer" href="#" class="font-serif hover:underline">Farmer
+                                    Custom Trek</a>
+                                <p class="text-xs flex">
+                                    <span>read more</span>
+                                    <svg class="w-4 h-4 ml-1" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
+                                        fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M5 12h14"></path>
+                                        <path d="M12 5l7 7-7 7"></path>
+                                    </svg>
+                                </p>
+                                <p class="text-xs dark:text-gray-400"><i class="fa-solid fa-person"></i>
+                                    <span class="ml-1">2-4 People</span>
+                                    <a rel="noopener noreferrer" href="#"
+                                        class="block dark:text-blue-400 lg:ml-2 lg:inline hover:underline"><i
+                                            class="fa-solid fa-dollar-sign"></i><span class="ml-1">22</span></a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex px-1 py-4">
+                            <img alt="" class="flex-shrink-0 object-cover w-20 h-20 mr-4 dark:bg-gray-500"
+                                src="src/images/Instagramable Tour/pura gubug.jpg">
+                            <div class="flex flex-col flex-grow justify-between">
+                                <a rel="noopener noreferrer" href="#" class="font-serif hover:underline">Instagrammable Tour</a>
+                                <p class="text-xs flex">
+                                    <span>read more</span>
+                                    <svg class="w-4 h-4 ml-1" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
+                                        fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M5 12h14"></path>
+                                        <path d="M12 5l7 7-7 7"></path>
+                                    </svg>
+                                </p>
+                                <p class="text-xs dark:text-gray-400"><i class="fa-solid fa-person"></i>
+                                    <span class="ml-1">1-4 People</span>
+                                    <a rel="noopener noreferrer" href="#"
+                                        class="block dark:text-blue-400 lg:ml-2 lg:inline hover:underline"><i
+                                            class="fa-solid fa-dollar-sign"></i><span class="ml-1">60</span></a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex px-1 py-4">
+                            <img alt="" class="flex-shrink-0 object-cover w-20 h-20 mr-4 dark:bg-gray-500"
+                                src="src/images/hidden gems trek/rice terraces (2).jpg">
+                            <div class="flex flex-col flex-grow justify-between">
+                                <a rel="noopener noreferrer" href="#" class="font-serif hover:underline">Hidden Gems Trek</a>
+                                <p class="text-xs flex">
+                                    <span>read more</span>
+                                    <svg class="w-4 h-4 ml-1" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
+                                        fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M5 12h14"></path>
+                                        <path d="M12 5l7 7-7 7"></path>
+                                    </svg>
+                                </p>
+                                <p class="text-xs dark:text-gray-400"><i class="fa-solid fa-person"></i>
+                                    <span class="ml-1">1-6 People</span>
+                                    <a rel="noopener noreferrer" href="#"
+                                        class="block dark:text-blue-400 lg:ml-2 lg:inline hover:underline"><i
+                                            class="fa-solid fa-dollar-sign"></i><span class="ml-1">47</span></a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Pricing Card -->
+            <div
+                class="flex flex-col p-6 mx-auto w-full text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+                <h3 class="text-2xl font-semibold">Start From</h3>
+                <div class="flex justify-center items-baseline my-8">
+                    <span class="mr-2 text-5xl font-extrabold">$25</span>
+                    <span class="text-gray-500 dark:text-gray-400" dark:text-gray-400>/Person</span>
+                </div>
+                <!-- List -->
+                <ul role="list" class="space-y-4 text-left flex justify-center">
+                    <div>
+                        <li class="flex items-center space-x-3">
+                            <!-- Icon -->
+                            <i class="fa-solid fa-check text-green-500"></i>
+                            <span>English Speaking Guide</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <!-- Icon -->
+                            <i class="fa-solid fa-check text-green-500"></i>
+                            <span>Up to 6 Person</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <!-- Icon -->
+                            <i class="fa-solid fa-check text-green-500"></i>
+                            <span>3 Hours Tour</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <!-- Icon -->
+                            <i class="fa-solid fa-xmark text-red-500"></i>
+                            <span>Entrance Fee</span>
+                        </li>
+                    </div>
+                </ul>
+                <button type="button" class="text-cyan-700 mt-4 hover:text-white border border-cyan-700 hover:bg-cyan-800 focus:ring-4 focus:outline-none focus:ring-cyan-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">Reservation Now</button>
+            </div>
+        </aside>
+    </div>
+
+    <!-- footer -->
+    <footer class="text-gray-600 body-font">
+        <div
+            class="container px-5 py-16 mt-20 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col border-t-2">
+            <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+                <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+                    <img src="src/images/logo/logo-non-transparan-removebg-preview.png" class="w-10" alt="">
+                    <span class="ml-2 text-cyan-500 text-xl">Munduk Authentic</span>
+                </a>
+                <p class="mt-2 text-sm text-gray-500">"Connect with Nature and Culture: Transformative Travel Starts
+                    Here"</p>
+            </div>
+            <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center justify-around">
+                <div class="md:w-auto w-full px-4">
+                    <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Pages</h2>
+                    <nav class="list-none mb-10">
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">Home</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">About</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">Services</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">Tour Package</a>
+                        </li>
+                    </nav>
+                </div>
+                <div class="md:w-auto w-full px-4">
+                    <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Recent Post</h2>
+                    <nav class="list-none mb-10">
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">Farmer Culinary Trek</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">Farmer Custom Trek</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">Hidden Gems Trek</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">Waterfalls Trek</a>
+                        </li>
+                    </nav>
+                </div>
+                <div class="md:w-auto w-full px-4">
+                    <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Contact</h2>
+                    <nav class="list-none mb-10">
+                        <li>
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <a class="text-gray-600 hover:text-gray-800">+62 857-3756-9008</a>
+                        </li>
+                        <li>
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <a class="text-gray-600 hover:text-gray-800">+62 877-6283-4455</a>
+                        </li>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="bg-gray-100">
+            <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+                <p class="text-gray-500 text-sm text-center sm:text-left">© 2023 Munduk Authentic —
+                    <a href="https://twitter.com/knyttneve" rel="noopener noreferrer" class="text-gray-600 ml-1"
+                        target="_blank">@kmsurya_n</a>
+                </p>
+                <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+                    <a class="text-gray-500 hover:text-pink-400">
+                        <i class="fa-brands fa-instagram text-xl"></i>
+                    </a>
+                    <a href="https://wa.me/+6287762834455" class="ml-3 text-gray-500 hover:text-green-400">
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                    </a>
+                    <a class="ml-3 text-gray-500">
+                        <i class="fa-brands fa-facebook text-xl hover:text-blue-400"></i>
+                    </a>
+                    <a class="ml-3 text-gray-500">
+                        <i class="fa-regular fa-envelope text-xl hover:text-red-400"></i>
+                    </a>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/7eaa0f0932.js" crossorigin="anonymous"></script>
+    <!-- <script src="node_modules/flowbite/dist/flowbite.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="src/js/blog.js"></script>
+</body>
+
+</html>
