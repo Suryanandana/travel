@@ -11,6 +11,7 @@ splide.mount();
 
 var splides = new Splide('#tour-slide', {
     perPage: 3,
+    autoHeight: true,
     type: 'loop',
     pagination: false,
     focus: 'center',
@@ -24,5 +25,8 @@ var splides = new Splide('#tour-slide', {
         },
     },
 });
-
 splides.mount();
+AOS.init({
+    duration: 1000,
+    once: true,
+});
